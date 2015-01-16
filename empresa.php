@@ -27,8 +27,8 @@ $bio4 =<<<BIO4
 	<p>Dies ist eine Seite in Deutsch</p>
 BIO4;
 	
-$idioma='';
-if(empty($_GET['idioma'])){
+//-----------Esto es con un IF------------
+/*if(empty($_GET['idioma'])){
 	echo'';
 }else{
 	$idioma=$_GET['idioma'];		
@@ -37,7 +37,25 @@ if(empty($_GET['idioma'])){
 	if($idioma=='frances')echo $bio3;
 	if($idioma=='aleman')echo $bio4;
 }
+*/
+//---------------------
+$idioma=$_GET['idioma'];
+switch($idioma){
+	case "ingles":
+		echo $bio2;
+	break;
+	case "español":
+		echo $bio1;
+	break;
+	case "frances":
+		echo $bio3;
+	break;
+	case "aleman":
+		echo $bio4;
+	break;
 
+	
+}
 
 ?>
 </div>
